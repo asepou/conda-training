@@ -1,0 +1,19 @@
+package:
+    name: seqtk
+    version: "102"
+build:
+    number: 0
+source:
+    url: https://github.com/lh3/seqtk/archive/v1.2.tar.gz
+    md5: 255ffe05bf2f073dc57abcff97f11a37
+requirements:
+    build:
+      - gcc # [linux]
+      - llvm # [osx]
+      - zlib
+    run:
+      - libgcc # [linux]
+      - zlib
+test:
+  commands:
+    - seqtk seq
